@@ -110,7 +110,7 @@ namespace FirstPlugin
                                 case ShaderParamType.Float4x2:
                                 case ShaderParamType.Float4x3:
                                 case ShaderParamType.Float4x4:
-                                    param.ValueFloat = Array.ConvertAll(Value.Split(','), float.Parse);
+                                    param.ValueFloat = Array.ConvertAll(Value.Split(':'), float.Parse);
                                     break;
                                 case ShaderParamType.Int:
                                 case ShaderParamType.Int2:
@@ -349,7 +349,7 @@ namespace FirstPlugin
                     case ShaderParamType.Float4x2:
                     case ShaderParamType.Float4x3:
                     case ShaderParamType.Float4x4:
-                        Value = string.Join(",", param.Value.ValueFloat);
+                        Value = string.Join(":", param.Value.ValueFloat);
                         break;
                     case ShaderParamType.Int:
                     case ShaderParamType.Int2:
